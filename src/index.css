@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: #080808;
+    color: #f0ede6;
+    font-family: "Syne", sans-serif;
+    overflow-x: hidden;
+    cursor: none;
+  }
+  ::selection { background: #e8ff5a; color: #080808; }
+  ::-webkit-scrollbar { width: 3px; }
+  ::-webkit-scrollbar-track { background: #080808; }
+  ::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 2px; }
+}
+
+/* ── Cursor ── */
+.cursor-dot {
+  position: fixed; width: 8px; height: 8px;
+  background: #e8ff5a; border-radius: 50%;
+  pointer-events: none; z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+.cursor-ring {
+  position: fixed; width: 34px; height: 34px;
+  border: 1px solid rgba(232,255,90,0.35); border-radius: 50%;
+  pointer-events: none; z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width .18s ease, height .18s ease, border-color .18s ease;
+}
+.cursor-ring.expand { width: 54px; height: 54px; border-color: #e8ff5a; }
+
+/* ── Grid bg ── */
+.grid-bg {
+  background-image:
+    linear-gradient(#1a1a1a 1px, transparent 1px),
+    linear-gradient(90deg, #1a1a1a 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* ── Marquee ── */
+.marquee-track { display: flex; width: max-content; animation: marquee 28s linear infinite; }
+.marquee-track:hover { animation-play-state: paused; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ── Project card hover bar ── */
+.proj-card { position: relative; }
+.proj-card::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0;
+  width: 3px; background: transparent;
+  transition: background 0.3s ease;
+}
+.proj-card:hover::before { background: #e8ff5a; }
+
+/* ── Image zoom on hover ── */
+.img-zoom { overflow: hidden; }
+.img-zoom img { transition: transform 0.6s cubic-bezier(0.16,1,0.3,1); }
+.img-zoom:hover img { transform: scale(1.04); }
+
+/* ── Delay utilities ── */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
+.delay-900 { animation-delay: 900ms; }
+
+/* ── Opacity zero until animated ── */
+.will-animate { opacity: 0; }
+.will-animate.animated { opacity: 1; }

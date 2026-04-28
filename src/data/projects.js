@@ -1,0 +1,123 @@
+const PROJECTS = [
+  {
+    num: "01",
+    date: "January 2026",
+    name: "TripHub",
+    tagline: "Full-Stack Travel Marketplace",
+    category: "MERN · Stripe · Multi-Role",
+    desc: "A production-grade travel marketplace connecting customers with transport vendors across Bangladesh. Features a real Stripe payment gateway, 3 role-based dashboards, and automated inventory management across 4 transport types — bus, train, plane, and launch.",
+    bullets: [
+      "3-Role Dashboard System — Customer, Vendor, and Admin panels with scoped permissions, booking workflows, and real-time status tracking (pending / accepted / rejected / paid)",
+      "Stripe Payment Integration — Live payment gateway with BDT/USD dual-currency support, automated inventory deduction on purchase, and full transaction history",
+      "Firebase Auth + Protected Routes — Google OAuth, persistent sessions, scalable REST API deployed on Vercel with CORS-hardened configuration",
+    ],
+    stack: ["React", "Firebase", "Node.js", "Express", "MongoDB", "Stripe", "TanStack Query", "Vercel"],
+    imgs: ["/TripHub1.png", "/TripHub2.png"],
+    links: [
+      { label: "Live Demo ↗", href: "https://trip-hub-12f28.web.app/", primary: true },
+    ],
+    accent: "#e8ff5a",
+  },
+  {
+    num: "02",
+    date: "January 2025",
+    name: "The Gallery",
+    tagline: "Artist Portfolio & Social Platform",
+    category: "MERN · JWT · Social Features",
+    desc: "A full-stack MERN platform for artists to showcase portfolios, curate favorites, and engage socially. Built with a RESTful API, JWT auth, MongoDB aggregation pipelines for filtering, and role-based access control for private galleries.",
+    bullets: [
+      "CRUD with Authorization — Secure artwork management with user-specific galleries, pre-filled update modals, and soft-delete flows ensuring users only modify their own content",
+      "Advanced Server-Side Search — Title/artist search and category filtering via MongoDB query operators, reducing frontend load and cutting response times",
+      "Atomic Social Layer — Like system using MongoDB $inc for race-condition-safe concurrent interactions; favorites collection with user-specific curation",
+    ],
+    stack: ["React", "Vite", "Firebase", "Node.js", "Express", "MongoDB", "Tailwind", "DaisyUI"],
+    imgs: ["/Gallery1.png", "/Gallary2.png"],
+    links: [
+      { label: "Live Demo ↗", href: "https://the-gallery-156c4.web.app/", primary: true },
+      { label: "Client", href: "https://github.com/00Shawon/the-gallary" },
+      { label: "Server", href: "https://github.com/00Shawon/the-gallery-server" },
+    ],
+    accent: "#e8ff5a",
+  },
+  {
+    num: "03",
+    date: "January 2026",
+    name: "Babunti & Asad",
+    tagline: "Decolonial Multilingual Wedding Platform",
+    category: "Next.js · RTL · Multilingual Design",
+    desc: "A digital wedding archive built on decolonial design principles — Arabic, Urdu, Bangla, and English treated as equal-weight languages, not afterthoughts. Full RTL layout support, scroll-driven narrative, and a filterable media gallery managing 100+ high-res images.",
+    bullets: [
+      "Script-First Multilingual Architecture — UI supporting Arabic, Urdu, Bangla, and English with fluid RTL/LTR typography transitions — no language treated as an add-on",
+      "Scroll-Based Narrative Frontend — Chronological storytelling architecture with optimized image rendering across the full ceremony journey",
+      "Interactive Guest & Media System — Custom blessing module and filterable gallery efficiently handling 100+ high-resolution images with lazy loading",
+    ],
+    stack: ["Next.js", "Tailwind CSS", "Vercel", "RTL Typography", "Multilingual Architecture"],
+    imgs: ["/Wedding1.png", "/Wedding2.png"],
+    links: [
+      { label: "Live Demo ↗", href: "https://demo-ten-pi-95.vercel.app/", primary: true },
+      { label: "GitHub", href: "https://github.com/00Shawon/demo" },
+    ],
+    accent: "#e8ff5a",
+  },
+  {
+    num: "04",
+    date: "August 2021",
+    name: "The Drowning Village",
+    tagline: "Climate Data Journalism Platform",
+    category: "Data Viz · Scrollytelling · Geospatial",
+    desc: "An immersive multimedia data journalism piece documenting the disappearance of Ghoramara Island, Sundarbans, due to sea-level rise. Combines satellite imagery, geospatial data, drone footage, and personal narratives. Built for low-bandwidth communities with a Bangla-first interface.",
+    bullets: [
+      "Scrollytelling Framework — Scroll-driven narrative triggering satellite map transitions and video overlays as users move through the story — no JS framework dependency",
+      "Geospatial Time-Lapse — Historical satellite data integrated via Leaflet.js to visualize the island's physical shrinking over decades, with Chart.js climate data overlays",
+      "Low-Bandwidth, Bangla-First Design — Optimized for coastal communities without high-speed internet; interface designed in Bangla first, English second — a decolonial approach",
+    ],
+    stack: ["React", "Leaflet.js", "Chart.js", "Tailwind CSS", "Scrollytelling"],
+    imgs: ["/Sundorban1.png", "/sundarban2.png"],
+    links: [
+      { label: "GitHub ↗", href: "https://github.com/00Shawon/Sundorban", primary: true },
+    ],
+    accent: "#00c896",
+  },
+  {
+    num: "05",
+    date: "2024",
+    name: "Ya Allah",
+    tagline: "99 Names of Allah — Interactive Experience",
+    category: "Next.js · Framer Motion · RTL · Ambient UX",
+    desc: "A calm, reverent digital experience presenting Asma ul Husna — the 99 Beautiful Names of Allah. Built as a direct counter to cluttered, commercial Islamic apps. Full Arabic RTL typography, emotion-based name discovery, ambient soundscape, and a bilingual Arabic/English interface.",
+    bullets: [
+      "Emotion-Guided Discovery — Users navigate to divine names by selecting their current emotional state (grief, gratitude, financial struggle) — connecting lived experience to spiritual meaning",
+      "Arabic-First Typography System — High-quality RTL calligraphy rendering with proper Arabic shaping, diacritics, and smooth bilingual switching — no compromise on script integrity",
+      "Immersive Ambient UX — Subtle particle background, scroll-based transitions via Framer Motion, and optional ambient soundscape creating a contemplative, distraction-free environment",
+    ],
+    stack: ["Next.js", "Tailwind CSS", "Framer Motion", "RTL Typography", "Ambient Audio"],
+    imgs: ["/Ya_Allah1.png", "/Ya_Allah2.png"],
+    links: [
+      { label: "Live Demo ↗", href: "https://github.com/00Shawon/Ya-Allah", primary: true },
+      { label: "GitHub", href: "https://github.com/00Shawon/Ya-Allah" },
+    ],
+    accent: "#c8a84b",
+  }, 
+  {
+    num: "06",
+    date: "December 2024",
+    name: "Skill-Swap",
+    tagline: "Peer-to-Peer Skill Exchange",
+    category: "React SPA · Firebase · Protected Routing",
+    desc: "A peer-to-peer skill exchange marketplace. Modern React SPA with Firebase authentication, protected routing architecture, real-time slot availability, and booking inquiry flows across 6+ routes — zero reload errors.",
+    bullets: [
+      "Protected Routing HOC — Preserves intended destinations, redirects unauthorized users to login, then navigates to original target post-auth — maintaining state across page reloads",
+      "Dynamic Skill Cards — Rating displays, pricing, conditional slot availability; detail views with booking forms using controlled inputs and toast feedback",
+      "Profile Management — Firebase updateProfile() integration with image preview, form validation, and optimistic UI updates for seamless UX",
+    ],
+    stack: ["React", "Firebase", "Node.js", "Express", "MongoDB", "JWT", "Tailwind", "DaisyUI"],
+    imgs: ["/Skillswap1.png", "/skillswap2.png"],
+    links: [
+      { label: "Live Demo ↗", href: "https://skill-swap-01.netlify.app/", primary: true },
+      { label: "Client", href: "https://github.com/00Shawon/Skill-Swap" },
+    ],
+    accent: "#e8ff5a",
+  }
+];
+
+export default PROJECTS;
