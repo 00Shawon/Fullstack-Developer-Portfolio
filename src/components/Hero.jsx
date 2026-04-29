@@ -14,7 +14,7 @@ function Stat({ num, suffix, decimals, label, trigger }) {
 }
 
 const heroLinks = [
-  { label: "View Live Portfolio ↗", href: "https://portfolio-rouge-alpha-12.vercel.app/", primary: true },
+  { label: "View Live Work ↗", href:"#projects", primary: true },
   { label: "GitHub", href: "https://github.com/00Shawon" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/mehedishawon1/" },
   { label: "Email", href: "mailto:mehedishawon121@gmail.com" },
@@ -24,7 +24,7 @@ export default function Hero() {
   const [ref, inView] = useInView(0.05);
 
   return (
-    <section ref={ref} className="relative min-h-screen flex flex-col justify-end px-6 md:px-10 pt-28 pb-14 overflow-hidden">
+    <section id="hero" ref={ref} className="relative min-h-screen flex flex-col justify-end px-6 md:px-10 pt-28 pb-14 overflow-hidden">
       {/* Grid */}
       <div className="grid-bg absolute inset-0 opacity-[0.25] pointer-events-none" />
       {/* Glow top-right */}
@@ -105,6 +105,7 @@ export default function Hero() {
               <img
                 src="/MehediShawon.jpg"
                 alt="Sm. Mehedi Hassan Shawon"
+                loading="eager"
                 className="w-full object-cover object-top rounded-sm"
                 style={{ aspectRatio: "3/4", filter: "contrast(1.05) brightness(0.97)" }}
               />

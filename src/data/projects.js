@@ -74,7 +74,8 @@ const PROJECTS = [
     stack: ["React", "Leaflet.js", "Chart.js", "Tailwind CSS", "Scrollytelling"],
     imgs: ["/Sundorban1.png", "/sundarban2.png"],
     links: [
-      { label: "GitHub ↗", href: "https://github.com/00Shawon/Sundorban", primary: true },
+      { label: "Live Demo ↗", href: "https://sundorban.vercel.app/", primary: true },
+      { label: "GitHub ↗", href: "https://github.com/00Shawon/Sundorban" },
     ],
     accent: "#00c896",
   },

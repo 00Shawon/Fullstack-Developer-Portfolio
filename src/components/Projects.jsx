@@ -12,6 +12,7 @@ function ImageCarousel({ imgs, name }) {
           key={src}
           src={src}
           alt={`${name} screenshot ${i + 1}`}
+          loading="lazy"
           className={`absolute inset-0 w-full h-full object-cover object-top transition-all duration-500 ${i === active ? "opacity-100 scale-100" : "opacity-0 scale-[1.02]"}`}
         />
       ))}

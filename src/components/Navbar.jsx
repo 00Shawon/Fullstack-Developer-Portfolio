@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const links = [
-  { label: "Stack", href: "#skills" },
+  { label: "Services", href: "#services" },
   { label: "Work", href: "#projects" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 px-6 md:px-10 py-5 flex items-center justify-between transition-all duration-400 ${scrolled ? "bg-bg/90 backdrop-blur-xl border-b border-border" : ""}`}>
       {/* Logo */}
-      <a href="#" className="font-mono text-[11px] tracking-[0.18em] uppercase text-accent font-medium">MH.Shawon</a>
+      <a href="#hero" className="font-mono text-[11px] tracking-[0.18em] uppercase text-accent font-medium">MH.Shawon</a>
 
       {/* Desktop */}
       <div className="hidden md:flex items-center gap-8">

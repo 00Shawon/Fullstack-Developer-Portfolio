@@ -1,3 +1,6 @@
+// This file is now deprecated.
+// Animation is handled by framer-motion in each component.
+// Keep this file to avoid import errors in older components.
 import { useEffect, useRef, useState } from "react";
 
 export function useInView(threshold = 0.12, once = true) {
