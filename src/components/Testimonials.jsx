@@ -18,13 +18,13 @@ const TESTIMONIALS = [
   initials: "MI",
 },
 
-{
-    quote: "Clear communication throughout. Delivered exactly what was scoped, on time. The Stripe integration worked first try.",
-    name: "Collecting Testimonials",
-    role: "Soon to be Client",
-    company: "Future Client",
-    initials: "AC",
-  },
+// {
+//     quote: "Clear communication throughout. Delivered exactly what was scoped, on time. The Stripe integration worked first try.",
+//     name: "Collecting Testimonials",
+//     role: "Soon to be Client",
+//     company: "Future Client",
+//     initials: "AC",
+//   },
 ];
 
 // ⚠️  INSTRUCTION: Replace placeholder testimonials with real ones.

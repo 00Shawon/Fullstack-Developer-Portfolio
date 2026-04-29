@@ -39,11 +39,12 @@ export default function About() {
         {/* LEFT: bio + timeline */}
         <div>
           <p
-            className={`text-txt-2 text-sm leading-[1.85] mb-10 transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
+            className={`text-txt-2 text-sm leading-[1.85] mb-6 transition-all duration-700 prose-width ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
             style={{ transitionDelay: "200ms" }}>
             I started as a journalist — conducting field interviews, synthesizing complex data, and translating it into stories that non-experts could act on. I brought that same discipline into software: every project I build is designed to communicate, not just function.
-            <br /><br />
-            My unique edge is the intersection of technical depth and narrative clarity. I can build a Stripe-integrated booking system <em>and</em> a geospatial climate story. I work across the fullstack — from MongoDB aggregation pipelines to RTL multilingual typography systems.
+          </p>
+          <p className="text-txt-2 text-sm leading-[1.8] mb-10 prose-width">
+            That journalism background changed how I think about UI. A nav menu is information hierarchy. A landing page is an argument. A dashboard is a story about data. I build interfaces the same way I used to write articles — with a clear question, a clear answer, and nothing in between that doesn't earn its place.
           </p>
 
           {/* Timeline */}

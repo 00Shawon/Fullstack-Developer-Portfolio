@@ -14,10 +14,10 @@ function Stat({ num, suffix, decimals, label, trigger }) {
 }
 
 const heroLinks = [
-  { label: "View Live Work ↗", href:"#projects", primary: true },
+  { label: "View Projects →", href: "#projects", primary: true },
+  { label: "Hire Me", href: "mailto:mehedishawon121@gmail.com" },
   { label: "GitHub", href: "https://github.com/00Shawon" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/mehedishawon1/" },
-  { label: "Email", href: "mailto:mehedishawon121@gmail.com" },
 ];
 
 export default function Hero() {
@@ -55,7 +55,7 @@ export default function Hero() {
           <div
             className={`flex flex-wrap gap-2 mb-6 transition-all duration-[800ms] ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
             style={{ transitionDelay: "280ms" }}>
-            {["Fullstack Developer", "React Specialist", "MERN Stack", "Data Journalist"].map(t => (
+            {["Creative Frontend Dev", "React Specialist", "Storytelling UX", "MERN Stack"].map(t => (
               <span key={t} className="font-mono text-[10px] tracking-[0.1em] uppercase border border-border-2 text-txt-2 px-3 py-1 rounded-sm">{t}</span>
             ))}
           </div>
@@ -64,7 +64,8 @@ export default function Hero() {
           <p
             className={`text-txt-2 leading-[1.75] mb-10 transition-all duration-[800ms] ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
             style={{ fontSize: "clamp(0.9rem,1.6vw,1.1rem)", maxWidth: 500, transitionDelay: "360ms" }}>
-            Fullstack developer with a journalist's eye for user experience. I build fast, accessible web products — from multi-role booking platforms to geospatial data stories. 6 live projects shipped.
+            Building immersive web experiences with React, storytelling, and modern UI design.
+            Frontend-focused developer creating responsive, visually engaging, and user-centered digital products.
           </p>
 
           {/* Links */}

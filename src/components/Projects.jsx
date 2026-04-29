@@ -84,7 +84,7 @@ function ProjectCard({ p, index }) {
             </h3>
             <p className="font-mono text-[11px] tracking-[0.08em] uppercase mb-5" style={{ color: p.accent }}>{p.tagline}</p>
 
-            <p className="text-txt-2 text-[0.875rem] leading-[1.8] mb-6">{p.desc}</p>
+            <p className="text-txt-2 text-[0.875rem] leading-[1.8] mb-6 prose-width">{p.desc}</p>
 
             {/* Bullets */}
             <ul className="flex flex-col gap-3 mb-7">
@@ -102,12 +102,27 @@ function ProjectCard({ p, index }) {
               })}
             </ul>
 
+            {/* Why I built this */}
+            {p.why && (
+              <div className="border-l-2 border-accent/40 pl-4 py-1 mb-6">
+                <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-accent mb-1">Why I built this</div>
+                <p className="text-txt-2 text-[0.8rem] leading-[1.75] italic">{p.why}</p>
+              </div>
+            )}
+
             {/* Stack chips */}
-            <div className="flex flex-wrap gap-2 mb-8">
+            <div className="flex flex-wrap gap-2 mb-4">
               {p.stack.map(t => (
                 <span key={t} className="font-mono text-[10px] px-2 py-1 bg-bg-3 border border-border-2 text-txt-3 rounded-sm">{t}</span>
               ))}
             </div>
+
+            {/* Role */}
+            {p.role && (
+              <div className="font-mono text-[10px] tracking-[0.08em] text-txt-3 mb-8">
+                <span className="text-txt-2">Role:</span> {p.role}
+              </div>
+            )}
 
             {/* Links */}
             <div className="flex flex-wrap gap-2">
