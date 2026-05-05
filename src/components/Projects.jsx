@@ -1,11 +1,19 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { useInView } from "../hooks/useInView";
 import PROJECTS from "../data/projects";
 
-function ImageCarousel({ imgs, name }) {
+function ImageCarousel({ imgs, name, liveLink }) {
   const [active, setActive] = useState(0);
+  const [hovered, setHovered] = useState(false);
+
   return (
-    <div className="relative bg-bg-3 rounded-sm overflow-hidden" style={{ aspectRatio: "16/10" }}>
+    <div
+      className="relative bg-bg-3 rounded-sm overflow-hidden group"
+      style={{ aspectRatio: "16/10" }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
       {/* Images */}
       {imgs.map((src, i) => (
         <img
@@ -13,40 +21,79 @@ function ImageCarousel({ imgs, name }) {
           src={src}
           alt={`${name} screenshot ${i + 1}`}
           loading="lazy"
-          className={`absolute inset-0 w-full h-full object-cover object-top transition-all duration-500 ${i === active ? "opacity-100 scale-100" : "opacity-0 scale-[1.02]"}`}
+          className={`absolute inset-0 w-full h-full object-cover object-top transition-all duration-700 ${
+            i === active
+              ? "opacity-100 scale-100"
+              : "opacity-0 scale-[1.03]"
+          } ${hovered ? "scale-[1.04]" : ""}`}
         />
       ))}
 
+      {/* Hover overlay */}
+      <motion.div
+        className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center gap-4 z-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: hovered ? 1 : 0 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
+        <motion.div
+          initial={{ y: 16, opacity: 0 }}
+          animate={{
+            y: hovered ? 0 : 16,
+            opacity: hovered ? 1 : 0,
+          }}
+          transition={{ duration: 0.35, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col items-center gap-3"
+        >
+          <span className="font-display font-bold text-white text-lg tracking-[-0.02em]">
+            {name}
+          </span>
+          {liveLink && (
+            <a
+              href={liveLink}
+              target="_blank"
+              rel="noreferrer"
+              className="font-mono text-[11px] tracking-[0.1em] uppercase bg-accent text-black px-5 py-2 rounded-sm font-semibold hover:bg-accent-2 transition-colors duration-200"
+              onClick={(e) => e.stopPropagation()}
+            >
+              View Live ↗
+            </a>
+          )}
+        </motion.div>
+      </motion.div>
+
       {/* Dots */}
       {imgs.length > 1 && (
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-20">
           {imgs.map((_, i) => (
             <button
               key={i}
               onClick={() => setActive(i)}
-              className={`w-[6px] h-[6px] rounded-full transition-all duration-200 ${i === active ? "bg-accent w-4" : "bg-white/40"}`}
+              className={`h-[5px] rounded-full transition-all duration-300 ${
+                i === active ? "bg-accent w-5" : "bg-white/40 w-[5px]"
+              }`}
               aria-label={`Screenshot ${i + 1}`}
             />
           ))}
         </div>
       )}
 
-      {/* Prev/Next arrows */}
+      {/* Arrows */}
       {imgs.length > 1 && (
         <>
           <button
             onClick={() => setActive((active - 1 + imgs.length) % imgs.length)}
-            className="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/60 text-white flex items-center justify-center text-xs hover:bg-black/90 transition-colors z-10"
-            aria-label="Previous">‹</button>
+            className="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 text-white flex items-center justify-center text-sm hover:bg-black/90 transition-colors z-20"
+          >‹</button>
           <button
             onClick={() => setActive((active + 1) % imgs.length)}
-            className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/60 text-white flex items-center justify-center text-xs hover:bg-black/90 transition-colors z-10"
-            aria-label="Next">›</button>
+            className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 text-white flex items-center justify-center text-sm hover:bg-black/90 transition-colors z-20"
+          >›</button>
         </>
       )}
 
-      {/* Screenshot label */}
-      <div className="absolute top-3 right-3 font-mono text-[9px] tracking-[0.12em] uppercase bg-black/70 text-white/70 px-2 py-1 rounded-sm z-10">
+      {/* Counter */}
+      <div className="absolute top-3 right-3 font-mono text-[9px] tracking-[0.12em] uppercase bg-black/70 text-white/70 px-2 py-1 rounded-sm z-20">
         {active + 1} / {imgs.length}
       </div>
     </div>
@@ -137,7 +184,11 @@ function ProjectCard({ p, index }) {
 
           {/* IMAGE side */}
           <div>
-            <ImageCarousel imgs={p.imgs} name={p.name} />
+            <ImageCarousel
+              imgs={p.imgs}
+              name={p.name}
+              liveLink={p.links.find(l => l.primary)?.href}
+            />
           </div>
         </div>
       </div>

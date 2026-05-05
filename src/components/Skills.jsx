@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useInView } from "../hooks/useInView";
 
 const GROUPS = [
@@ -44,23 +45,47 @@ export default function Skills() {
         </h2>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.08 } },
+          }}
+        >
           {GROUPS.map((g, i) => (
-            <div key={g.label}
-              className={`bg-bg-2 p-7 transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
-              style={{ transitionDelay: `${150 + i * 70}ms` }}>
-              <div className={`font-mono text-[10px] tracking-[0.15em] uppercase mb-4 ${g.color}`}>{g.label}</div>
+            <motion.div
+              key={g.label}
+              variants={{
+                hidden: { opacity: 0, y: 24 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+                },
+              }}
+              className="bg-bg-2 p-7"
+            >
+              <div className={`font-mono text-[10px] tracking-[0.15em] uppercase mb-4 ${g.color}`}>
+                {g.label}
+              </div>
               <div className="flex flex-wrap gap-2">
-                {g.tags.map(t => (
-                  <span key={t}
-                    className="font-mono text-[11px] px-3 py-1 border border-border-2 text-txt-2 rounded-sm hover:border-accent hover:text-accent transition-all duration-200 cursor-default">
+                {g.tags.map((t) => (
+                  <motion.span
+                    key={t}
+                    whileHover={{ scale: 1.05, borderColor: "#e8ff5a", color: "#e8ff5a" }}
+                    transition={{ duration: 0.15 }}
+                    className="font-mono text-[11px] px-3 py-1 border border-border-2 text-txt-2 rounded-sm cursor-default inline-block"
+                  >
                     {t}
-                  </span>
+                  </motion.span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

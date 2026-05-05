@@ -80,3 +80,27 @@
 /* ── Opacity zero until animated ── */
 .will-animate { opacity: 0; }
 .will-animate.animated { opacity: 1; }
+
+/* ── Button micro-interactions ── */
+a[class*="bg-accent"],
+button[class*="bg-accent"] {
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+a[class*="bg-accent"]:hover,
+button[class*="bg-accent"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232, 255, 90, 0.25);
+}
+
+a[class*="bg-accent"]:active,
+button[class*="bg-accent"]:active {
+  transform: translateY(0px);
+  box-shadow: none;
+}
+
+/* Border buttons */
+a[class*="border-border-2"]:hover {
+  transform: translateY(-1px);
+  transition: transform 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}

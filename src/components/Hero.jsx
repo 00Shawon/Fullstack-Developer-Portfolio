@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useInView } from "../hooks/useInView";
 import { useCounter } from "../hooks/useCounter";
 
@@ -46,9 +47,26 @@ export default function Hero() {
 
           {/* Name */}
           <h1
-            className={`font-display font-extrabold leading-[0.92] tracking-[-0.035em] mb-5 transition-all duration-[800ms] ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-7"}`}
-            style={{ fontSize: "clamp(3.2rem,9.5vw,8.5rem)", transitionDelay: "180ms" }}>
-            Mehedi<br />Hassan<br /><span className="text-accent">Shawon</span>
+            className="font-display font-extrabold leading-[0.92] tracking-[-0.035em] mb-5"
+            style={{ fontSize: "clamp(3.2rem,9.5vw,8.5rem)" }}
+          >
+            {["Mehedi", "Hassan", "Shawon"].map((word, i) => (
+              <motion.span
+                key={word}
+                className="block overflow-hidden"
+                initial={{ opacity: 0, y: 60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.85,
+                  delay: 0.15 + i * 0.12,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+              >
+                {i === 2 ? (
+                  <span className="text-accent">{word}</span>
+                ) : word}
+              </motion.span>
+            ))}
           </h1>
 
           {/* Role tags */}
