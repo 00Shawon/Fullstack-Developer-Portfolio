@@ -3,67 +3,93 @@ import { motion } from "framer-motion";
 const SERVICES = [
   {
     num: "01",
-    title: "Landing Pages & Business Sites",
-    desc: "Fast, modern, conversion-focused websites for startups, creators, and businesses. Responsive across every device. Deployed and ready.",
-    tags: ["React", "Tailwind", "Vite", "Vercel"],
-    for: "Startups · Small businesses · Creators",
+    title: "Story-Driven Websites",
+    desc: "Websites designed around the story, identity, and purpose of a person, organization, or project. We combine narrative structure, visual design, and responsive development into one experience.",
+    tags: ["Narrative Design", "React", "Responsive Web", "Custom UI"],
+    for: "Organizations · Creators · Businesses",
   },
   {
     num: "02",
-    title: "Interactive Web Experiences",
-    desc: "Storytelling-focused websites with immersive UI, scroll-driven narratives, geospatial data, and smooth interactions. Built for impact.",
+    title: "Interactive Storytelling",
+    desc: "Immersive web experiences that let audiences explore stories through scroll-driven narratives, maps, timelines, data, and interactive visual elements.",
     tags: ["Scrollytelling", "Leaflet.js", "Chart.js", "Framer Motion"],
-    for: "NGOs · Journalists · Cultural projects · Research",
+    for: "NGOs · Journalists · Researchers · Cultural Projects",
   },
   {
     num: "03",
-    title: "MERN Stack Applications",
-    desc: "Full-stack web apps with authentication, role-based dashboards, REST APIs, and payment integration. From idea to deployed product.",
-    tags: ["MongoDB", "Express", "React", "Node.js", "Stripe", "JWT"],
-    for: "Founders · Agencies · Product teams",
+    title: "Digital Platforms",
+    desc: "Custom web platforms that bring content, information, and audience interaction together. From structured content systems to full-stack applications, built around how people use and experience the platform.",
+    tags: ["Next.js", "React", "Node.js", "MongoDB", "APIs"],
+    for: "Founders · Organizations · Product Teams",
   },
   {
     num: "04",
-    title: "Portfolio & Personal Brand Sites",
-    desc: "Custom portfolio experiences designed to stand out. Multilingual support, RTL layouts, and decolonial design approaches available.",
-    tags: ["Next.js", "Multilingual", "RTL", "Custom Design"],
-    for: "Developers · Designers · Artists · Academics",
+    title: "Personal & Organizational Identity",
+    desc: "Digital identities translated into distinctive web experiences. Portfolio sites, personal brands, organizational profiles, and multilingual interfaces designed to communicate clearly and authentically.",
+    tags: ["Visual Identity", "Multilingual", "RTL", "Custom Design"],
+    for: "Professionals · Artists · Academics · Organizations",
   },
 ];
 
 const container = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.12 } },
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
 };
 
 const item = {
-  hidden: { opacity: 0, y: 32 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.75, ease: [0.16, 1, 0.3, 1] } },
+  hidden: {
+    opacity: 0,
+    y: 32,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.75,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
 };
 
 export default function Services() {
   return (
-    <section id="services" className="px-6 md:px-10 py-24 border-b border-border">
+    <section
+      id="services"
+      className="px-6 md:px-10 py-24 border-b border-border"
+    >
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        transition={{
+          duration: 0.7,
+          ease: [0.16, 1, 0.3, 1],
+        }}
       >
         <div className="flex items-center gap-3 mb-3">
-          <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-txt-3">What I offer</span>
+          <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-txt-3">
+            What we create
+          </span>
+
           <span className="flex-1 h-px bg-border" />
         </div>
+
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-14">
           <h2
             className="font-display font-extrabold tracking-[-0.03em] leading-tight"
-            style={{ fontSize: "clamp(2rem,4vw,3rem)" }}>
-            Services
+            style={{ fontSize: "clamp(2rem,4vw,3rem)" }}
+          >
+            Digital Storytelling
           </h2>
+
           <p className="font-mono text-[11px] tracking-[0.06em] text-txt-2 max-w-sm md:text-right leading-relaxed">
-            I take projects from concept to deployed product.<br />
-            Message me — I'll tell you honestly if I'm the right fit.
+            We combine narrative, visual communication, and technology
+            to build digital experiences with a purpose.
           </p>
         </div>
       </motion.div>
@@ -84,7 +110,10 @@ export default function Services() {
           >
             {/* Top row */}
             <div className="flex items-start justify-between">
-              <span className="font-mono text-[10px] tracking-[0.15em] uppercase text-txt-3">{s.num}</span>
+              <span className="font-mono text-[10px] tracking-[0.15em] uppercase text-txt-3">
+                {s.num}
+              </span>
+
               <span className="font-mono text-[10px] tracking-[0.08em] text-txt-3 border border-border-2 px-2 py-1 rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 Available
               </span>
@@ -95,17 +124,24 @@ export default function Services() {
               {s.title}
             </h3>
 
-            {/* Desc */}
-            <p className="text-txt-2 text-sm leading-[1.8] flex-1">{s.desc}</p>
+            {/* Description */}
+            <p className="text-txt-2 text-sm leading-[1.8] flex-1">
+              {s.desc}
+            </p>
 
-            {/* For who */}
-            <div className="font-mono text-[10px] tracking-[0.08em] text-teal">{s.for}</div>
+            {/* Audience */}
+            <div className="font-mono text-[10px] tracking-[0.08em] text-teal">
+              {s.for}
+            </div>
 
-            {/* Tags */}
+            {/* Technologies */}
             <div className="flex flex-wrap gap-2">
-              {s.tags.map((t) => (
-                <span key={t} className="font-mono text-[10px] px-2 py-1 bg-bg-3 border border-border-2 text-txt-3 rounded-sm">
-                  {t}
+              {s.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="font-mono text-[10px] px-2 py-1 bg-bg-3 border border-border-2 text-txt-3 rounded-sm"
+                >
+                  {tag}
                 </span>
               ))}
             </div>
@@ -116,23 +152,34 @@ export default function Services() {
         ))}
       </motion.div>
 
-      {/* CTA row */}
+      {/* CTA */}
       <motion.div
         className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 border border-border-2 bg-bg-2 px-6 py-5 rounded-sm"
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+        transition={{
+          duration: 0.6,
+          delay: 0.4,
+          ease: [0.16, 1, 0.3, 1],
+        }}
       >
         <div>
-          <div className="font-display font-semibold text-sm mb-1">Not sure which service fits your project?</div>
-          <div className="font-mono text-[11px] text-txt-2">Message me first. I'll scope it for free and give you an honest answer.</div>
+          <div className="font-display font-semibold text-sm mb-1">
+            Have a story, idea, or project in mind?
+          </div>
+
+          <div className="font-mono text-[11px] text-txt-2">
+            Tell us what you are trying to communicate. We can figure out
+            the right digital form together.
+          </div>
         </div>
+
         <a
           href="mailto:mehedishawon121@gmail.com"
           className="font-mono text-[11px] tracking-[0.1em] uppercase bg-accent text-black px-5 py-3 rounded-sm font-semibold hover:bg-accent-2 transition-colors duration-200 whitespace-nowrap shrink-0"
         >
-          Get a free scope →
+          Start a Project →
         </a>
       </motion.div>
     </section>

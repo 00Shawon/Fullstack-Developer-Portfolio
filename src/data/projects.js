@@ -3,135 +3,274 @@ const PROJECTS = [
     num: "01",
     date: "January 2026",
     name: "TripHub",
-    tagline: "Full-Stack Travel Marketplace",
-    category: "MERN · Stripe · Multi-Role",
-    desc: "A full-stack ticket marketplace focused on trust, accessibility, and seamless user experience across Bangladesh's transport network. Built for real transactions — not a tutorial project.",
+    tagline: "Digital Transport Booking Experience",
+    category: "Digital Product · UX · Full-Stack",
+
+    desc: "A transport booking platform designed around trust, clarity, and a smoother user experience across Bangladesh.",
+
     bullets: [
-      "3-Role Dashboard System — Customer, Vendor, Admin with scoped permissions and real-time booking status (pending / accepted / rejected / paid)",
-      "Live Stripe Payments — BDT/USD dual-currency gateway with automated inventory deduction and full transaction history",
-      "Firebase Auth — Google OAuth, persistent sessions, protected routes, scalable REST API on Vercel",
+      "Clear Booking Flow — Customer, vendor, and admin experiences connected through visible booking states",
+      "Integrated Payments — BDT/USD payments with automated inventory and transaction tracking",
+      "Connected Platform — Authentication, protected routes, and scalable backend infrastructure",
     ],
-    why: "Built to explore how trust and UX clarity can solve the friction in online transport booking — a real problem in Bangladesh.",
-    role: "Full Design & Development — Frontend, Backend, Payments, Deployment",
-    stack: ["React", "Firebase", "Node.js", "Express", "MongoDB", "Stripe", "TanStack Query", "Vercel"],
+
+    why: "Built to reduce friction and uncertainty in online transport booking.",
+
+    role: "Full Design & Development",
+
+    stack: [
+      "React",
+      "Firebase",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Stripe",
+      "TanStack Query",
+      "Vercel",
+    ],
+
     imgs: ["/TripHub1.png", "/TripHub2.png"],
+
     links: [
-      { label: "Live Demo ↗", href: "https://trip-hub-12f28.web.app/", primary: true },
+      {
+        label: "Live Demo ↗",
+        href: "https://trip-hub-12f28.web.app/",
+        primary: true,
+      },
     ],
+
     accent: "#e8ff5a",
   },
+
   {
     num: "02",
-    date: "January 2026",
+    date: "May 2026",
     name: "Babunti & Asad Wedding",
-    tagline: "Decolonial Multilingual Wedding Platform",
-    category: "Next.js · RTL · Multilingual Design",
-    desc: "A multilingual cultural wedding archive built on decolonial design principles — Arabic, Urdu, Bangla, and English treated as equal-weight languages, not afterthoughts. RTL-first typography system.",
+    tagline: "Multilingual Digital Wedding Story",
+    category: "Digital Storytelling · RTL · Multilingual",
+
+    desc: "A multilingual digital wedding experience bringing four languages, cultural identity, and visual storytelling into one space.",
+
     bullets: [
-      "Script-First Multilingual Architecture — Full RTL/LTR support with fluid typography across 4 writing systems",
-      "Scroll-Based Narrative — Chronological storytelling with optimized image rendering across the ceremony journey",
-      "Guest Blessing System — Interactive module with filterable media gallery managing 100+ high-res images",
+      "Multilingual Experience — Arabic, Urdu, Bangla, and English with RTL/LTR support",
+      "Story-Based Navigation — A chronological visual journey through the celebration",
+      "Guest Interaction — Blessings and an interactive media gallery",
     ],
-    why: "A direct challenge to English-first default design. Each language was given equal visual and functional weight from day one.",
-    role: "Full Design & Development — Next.js, Multilingual Architecture, Vercel",
-    stack: ["Next.js", "Tailwind CSS", "Vercel", "RTL Typography", "Multilingual Architecture"],
+
+    why: "Built to bring language, culture, and memory together in one digital experience.",
+
+    role: "Full Design & Development",
+
+    stack: [
+      "Next.js",
+      "Tailwind CSS",
+      "Vercel",
+      "RTL Typography",
+      "Multilingual Architecture",
+    ],
+
     imgs: ["/Wedding1.png", "/Wedding2.png"],
+
     links: [
-      { label: "Live Demo ↗", href: "https://demo-ten-pi-95.vercel.app/", primary: true },
-      { label: "GitHub", href: "https://github.com/00Shawon/demo" },
+      {
+        label: "Live Demo ↗",
+        href: "https://demo-ten-pi-95.vercel.app/",
+        primary: true,
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/00Shawon/demo",
+      },
     ],
+
     accent: "#e8ff5a",
   },
+
   {
     num: "03",
-    date: "August 2021",
+    date: "Aug 2025",
     name: "The Drowning Village",
-    tagline: "Climate Data Journalism Platform",
-    category: "Data Viz · Scrollytelling · Geospatial",
-    desc: "An immersive multimedia data journalism platform documenting the disappearance of Ghoramara Island, Sundarbans, through satellite data, geospatial mapping, and personal community narratives.",
+    tagline: "Interactive Climate Story",
+    category: "Digital Storytelling · Data · Geospatial",
+
+    desc: "An interactive story documenting the disappearance of Ghoramara Island through satellite data, maps, and community narratives.",
+
     bullets: [
-      "Scroll-Driven Narrative — Satellite map transitions and video overlays triggered by scroll position",
-      "Geospatial Time-Lapse — Leaflet.js historical satellite data visualizing island shrinkage over decades",
-      "Bangla-First, Low-Bandwidth Design — Built for coastal communities without high-speed internet or English literacy",
+      "Interactive Narrative — Maps, imagery, text, and video combined through scroll",
+      "Geospatial Storytelling — Historical satellite data showing landscape change over time",
+      "Accessible Design — Bangla-first and designed with low-bandwidth use in mind",
     ],
-    why: "Built to answer: how can digital tools make invisible climate impacts visible to the communities living them — not just to researchers?",
-    role: "Research, Design & Development — Geospatial Visualization, Scrollytelling, Community UX",
-    stack: ["React", "Leaflet.js", "Chart.js", "Tailwind CSS", "Scrollytelling"],
+
+    why: "Built to make slow-moving environmental change visible and human.",
+
+    role: "Research, Design & Development",
+
+    stack: [
+      "React",
+      "Leaflet.js",
+      "Chart.js",
+      "Tailwind CSS",
+      "Scrollytelling",
+    ],
+
     imgs: ["/Sundorban1.png", "/sundarban2.png"],
+
     links: [
-      { label: "Live Demo ↗", href: "https://sundorban.vercel.app/", primary: true },
-      { label: "GitHub ↗", href: "https://github.com/00Shawon/Sundorban" },
+      {
+        label: "Live Demo ↗",
+        href: "https://sundorban.vercel.app/",
+        primary: true,
+      },
+      {
+        label: "GitHub ↗",
+        href: "https://github.com/00Shawon/Sundorban",
+      },
     ],
+
     accent: "#00c896",
   },
+
   {
     num: "04",
-    date: "2024",
+    date: "June 2024",
     name: "Ya Allah",
-    tagline: "99 Names of Allah — Interactive Experience",
-    category: "Next.js · Framer Motion · RTL · Ambient UX",
-    desc: "A calm, reverent digital experience presenting Asma ul Husna — the 99 Beautiful Names of Allah. A direct counter to cluttered, commercial Islamic apps. Decolonial design, Arabic-first typography.",
+    tagline: "Interactive Reflection Experience",
+    category: "Digital Experience · RTL · Interactive",
+
+    desc: "A calm digital experience around the 99 Names of Allah, combining Arabic-first typography, bilingual content, and subtle interaction.",
+
     bullets: [
-      "Emotion-Guided Discovery — Navigate to divine names by selecting your current emotional or spiritual state",
-      "Arabic-First Typography — High-quality RTL calligraphy with proper shaping, diacritics, and bilingual switching",
-      "Ambient Contemplative UX — Framer Motion scroll transitions and optional soundscape for focused reflection",
+      "Meaning-Led Discovery — Explore names through emotional and spiritual states",
+      "Arabic-First Interface — RTL typography and bilingual navigation",
+      "Contemplative Interaction — Motion and optional sound support a focused experience",
     ],
-    why: "Built to demonstrate that Islamic digital spaces can be beautiful, calm, and culturally respectful — not commercial or generic.",
-    role: "Full Design & Development — Next.js, Framer Motion, RTL Typography",
-    stack: ["Next.js", "Tailwind CSS", "Framer Motion", "RTL Typography", "Ambient Audio"],
+
+    why: "Built around calm, clarity, and cultural respect.",
+
+    role: "Full Design & Development",
+
+    stack: [
+      "Next.js",
+      "Tailwind CSS",
+      "Framer Motion",
+      "RTL Typography",
+      "Ambient Audio",
+    ],
+
     imgs: ["/Ya_Allah1.png", "/Ya_Allah2.png"],
+
     links: [
-      { label: "Live Demo ↗", href: "https://ya-allah-henna.vercel.app/", primary: true },
-      { label: "GitHub", href: "https://github.com/00Shawon/Ya-Allah" },
+      {
+        label: "Live Demo ↗",
+        href: "https://ya-allah-henna.vercel.app/",
+        primary: true,
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/00Shawon/Ya-Allah",
+      },
     ],
+
     accent: "#c8a84b",
   },
+
   {
     num: "05",
     date: "January 2025",
     name: "The Gallery",
-    tagline: "Artist Portfolio & Social Platform",
-    category: "MERN · JWT · Social Features",
-    desc: "A social platform for artists to showcase portfolios, build audiences, and engage through atomic interactions. Every feature was designed around creator ownership and content integrity.",
+    tagline: "Creator-Centered Digital Platform",
+    category: "Creator Platform · Community · Front-End",
+
+    desc: "A social platform for artists to present their work, build audiences, and interact around creative content.",
+
     bullets: [
-      "CRUD with Authorization — User-specific galleries with soft-delete flows and pre-filled update modals",
-      "Server-Side Search — Title/artist filtering via MongoDB query operators, reducing frontend load",
-      "Race-Condition-Safe Social Layer — Like system using MongoDB $inc for atomic concurrent updates",
+      "Creator Profiles — Personal galleries built around each artist's work",
+      "Content Discovery — Search and filtering for easier exploration",
+      "Community Interaction — Engagement features connecting creators and audiences",
     ],
-    why: "Designed to explore how digital spaces can center the creator rather than the platform — ownership-first architecture.",
-    role: "Full Design & Development — React, Node.js, MongoDB, Firebase",
-    stack: ["React", "Vite", "Firebase", "Node.js", "Express", "MongoDB", "Tailwind", "DaisyUI"],
+
+    why: "Built to keep creators and their work at the center of the experience.",
+
+    role: "Full Design & Development",
+
+    stack: [
+      "React",
+      "Vite",
+      "Firebase",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Tailwind",
+      "DaisyUI",
+    ],
+
     imgs: ["/Gallery1.png", "/Gallary2.png"],
+
     links: [
-      { label: "Live Demo ↗", href: "https://the-gallery-156c4.web.app/", primary: true },
-      { label: "Client", href: "https://github.com/00Shawon/the-gallary" },
-      { label: "Server", href: "https://github.com/00Shawon/the-gallery-server" },
+      {
+        label: "Live Demo ↗",
+        href: "https://the-gallery-156c4.web.app/",
+        primary: true,
+      },
+      {
+        label: "Client",
+        href: "https://github.com/00Shawon/the-gallary",
+      },
+      {
+        label: "Server",
+        href: "https://github.com/00Shawon/the-gallery-server",
+      },
     ],
-    accent: "#e8ff5a",
-  },
-  {
-    num: "06",
-    date: "January 2026",
-    name: "Skill-Swap",
-    tagline: "Peer-to-Peer Skill Exchange",
-    category: "React SPA · Firebase · Protected Routing",
-    desc: "A peer-to-peer skill exchange marketplace demonstrating modern React SPA patterns — authentication flows, protected routing, real-time slot management, and booking UX across 6+ routes.",
-    bullets: [
-      "Protected Routing HOC — Preserves intended destinations post-authentication across page reloads",
-      "Dynamic Skill Cards — Rating displays, pricing tiers, conditional slot availability with toast feedback",
-      "Optimistic Profile Management — Firebase updateProfile() with image preview and instant UI feedback",
-    ],
-    why: "Built to practice real-world auth complexity and marketplace UX patterns in a functional product context.",
-    role: "Full Design & Development — React, Firebase, MongoDB, JWT",
-    stack: ["React", "Firebase", "Node.js", "Express", "MongoDB", "JWT", "Tailwind", "DaisyUI"],
-    imgs: ["/Skillswap1.png", "/skillswap2.png"],
-    links: [
-      { label: "Live Demo ↗", href: "https://skill-swap-01.netlify.app/", primary: true },
-      { label: "Client", href: "https://github.com/00Shawon/Skill-Swap" },
-    ],
+
     accent: "#e8ff5a",
   },
 
+  {
+    num: "06",
+    date: "January 2024",
+    name: "Skill-Swap",
+    tagline: "Peer Learning Platform",
+    category: "Digital Platform · UX · Full-Stack",
+
+    desc: "A peer-to-peer platform designed to make discovering, comparing, and exchanging skills easier.",
+
+    bullets: [
+      "Simple Discovery — Clear skill cards with ratings, pricing, and availability",
+      "Connected Booking — Authentication, routing, and slot management",
+      "Responsive Experience — Streamlined profiles and immediate interface feedback",
+    ],
+
+    why: "Built to make peer-to-peer services easier to navigate.",
+
+    role: "Full Design & Development",
+
+    stack: [
+      "React",
+      "Firebase",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "Tailwind",
+      "DaisyUI",
+    ],
+
+    imgs: ["/Skillswap1.png", "/skillswap2.png"],
+
+    links: [
+      {
+        label: "Live Demo ↗",
+        href: "https://skill-swap-01.netlify.app/",
+        primary: true,
+      },
+      {
+        label: "Client",
+        href: "https://github.com/00Shawon/Skill-Swap",
+      },
+    ],
+
+    accent: "#e8ff5a",
+  },
 ];
 
 export default PROJECTS;
